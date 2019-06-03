@@ -31,31 +31,31 @@ The API exposes below three end-points
    
     2. Sign-in 
 
-		// URI : GET : /api/account/signin?email=xxxx&password=xxxx
+	// URI : GET : /api/account/signin?email=xxxx&password=xxxx
 
-		E.g. https://localhost:44330/api/account/signin?email=test@test.com&password=****
+	E.g. https://localhost:44330/api/account/signin?email=test@test.com&password=****
       
-		Upon successful sign-in, a new JWT token is created. The output would look like
+	Upon successful sign-in, a new JWT token is created. The output would look like
       
-		{
-			"id": "6b463f5e-6e42-4572-88c1-418171474791",
-			"createdOn": "2019-05-27T07:18:44.11",
-			"lastUpdatedOn": "2019-05-27T07:25:30.9129246Z",
-			"lastLoginOn": "2019-05-27T07:25:30.9128601Z",
-			"token": JWTToken
-		}
+	{
+	   "id": "6b463f5e-6e42-4572-88c1-418171474791",
+	   "createdOn": "2019-05-27T07:18:44.11",
+	   "lastUpdatedOn": "2019-05-27T07:25:30.9129246Z",
+	   "lastLoginOn": "2019-05-27T07:25:30.9128601Z",
+	   "token": JWTToken
+	}
 
     3. Search User
 
-		// URI: GET : /api/account/searchuser{id}
+	// URI: GET : /api/account/searchuser{id}
     
-		E.g. https://localhost:44330/api/account/searchuser/6b463f5e-6e42-4572-88c1-418171474791
+	E.g. https://localhost:44330/api/account/searchuser/6b463f5e-6e42-4572-88c1-418171474791
     
-		Upon successful searching the user, the api return a user session status among below
+	Upon successful searching the user, the api return a user session status among below
 		
-			a.Authorized
-			b.Unauthorized
-			c.InvalidSession
+	   a.Authorized
+	   b.Unauthorized
+	   c.InvalidSession
 
 Source Code Structure
 
@@ -78,6 +78,7 @@ Database Migration
   Database connection string is read from the appsettings.json. SQL server users credentials may apply as it may required in the higher environments
 
   > Add-Migration InitialCreate
+  
   > Update-Database
 
 Other Features
@@ -89,3 +90,6 @@ JWT Token is generated
 Swagger UI is configured to explore and test the Api endpoints. Api end-points are tested using Postman as well as Swagger
 
 User password is hashed using BCrypt.Net.BCrypt nuget package and stored. The secret key is used from appsettings.json
+
+Below is the Swagger UI Url to view the end-points
+  /swagger/index.html
