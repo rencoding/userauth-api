@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:GenesisTest.Controllers.AccountController.SignUp(GenesisTest.WebAPI.DomainEntities.User)">
+            <summary>
+            POST: api/account/signup
+            </summary>
+            <param name="User"></param>
+            <returns>A new user is created if email is not already registered. If not, return false</returns>
+        </member>
+        <member name="M:GenesisTest.Controllers.AccountController.SignIn(System.String,System.String)">
+            <summary>
+            Sign-in  
+            </summary>
+            <param name="Email"></param>
+            <param name="Password"></param>
+            <returns>Upon successful Sign-in, it returns the new User including new token</returns>
+        </member>
+        <member name="M:GenesisTest.Controllers.AccountController.SearchUser(System.Guid)">
+            <summary>
+            Search for User
+            </summary>
+            <param name="Id"></param>
+            <returns>Returns User after validating the User Id and Token</returns>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.Id">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.Password">
+            <summary>
+            Hashed Password
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.CreatedOn">
+            <summary>
+            Created date
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.LastUpdatedOn">
+            <summary>
+            Last updated date
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.LastLoginOn">
+            <summary>
+            Last Login date (in case of creation, it will be the same as creation date)
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.Token">
+            <summary>
+            JWT Token
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.DomainEntities.User.TelephoneNumbers">
+            <summary>
+            Telephone Numbers
+            </summary>
+        </member>
+        <member name="F:GenesisTest.WebAPI.DomainEntities.UserSessionStatus.Authorized">
+            <summary>
+            Authorized
+            </summary>
+        </member>
+        <member name="F:GenesisTest.WebAPI.DomainEntities.UserSessionStatus.Unauthorized">
+            <summary>
+            Unauthorized; Token doesnot exist, User Id or Token not matching
+            </summary>
+        </member>
+        <member name="F:GenesisTest.WebAPI.DomainEntities.UserSessionStatus.InvalidSession">
+            <summary>
+            Invalid Session; Token expired
+            </summary>
+        </member>
+        <member name="P:GenesisTest.WebAPI.Helpers.AppSettings.Secret">
+            <summary>
+            To store the Secret Key for JWT creation
+            </summary>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Helpers.StringToJsonFormatter.ToJson(System.String)">
+            <summary>
+            String Extension to convert to Json
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Services.IUserService.SignUp(GenesisTest.WebAPI.DomainEntities.User@)">
+            <summary>
+            /// Sign up the user. If email exists, then return error
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Services.IUserService.SignIn(System.String,System.String,GenesisTest.WebAPI.DomainEntities.User@)">
+            <summary>
+            Sign in by Email and Password
+            </summary>
+            <param name="submittedEmail"></param>
+            <param name="submittedPassword"></param>
+            <param name="User"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Services.IUserService.FindUserById(System.Guid,System.String,GenesisTest.WebAPI.DomainEntities.User@)">
+            <summary>
+            Find User by given id
+            </summary>
+            <param name="submittedUserId"></param>
+            <param name="jwtToken"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Services.UserService.SignUp(GenesisTest.WebAPI.DomainEntities.User@)">
+            <summary>
+            Sign up the user. If email exists, then return error
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Services.UserService.SignIn(System.String,System.String,GenesisTest.WebAPI.DomainEntities.User@)">
+            <summary>
+            Sign in by Email and Password
+            </summary>
+            <param name="submittedEmail">User submitted Email</param>
+            <param name="submittedPassword">User submitted Password</param>
+            <param name="User"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GenesisTest.WebAPI.Services.UserService.FindUserById(System.Guid,System.String,GenesisTest.WebAPI.DomainEntities.User@)">
+            <summary>
+            Find User by given id
+            </summary>
+            <param name="submittedUserId"></param>
+            <param name="jwtToken"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
