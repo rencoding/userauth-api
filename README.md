@@ -77,9 +77,11 @@ Database Migration
   Project is developed using Code First Migration approach and tested with SQL Server 13.0 (LocalDb)
   Database connection string is read from the appsettings.json. SQL server users credentials may apply as it may required in the higher environments
 
-  > Add-Migration InitialCreate
+ Below commands are used for the migration
+
+   > Add-Migration InitialCreate
   
-  > Update-Database
+   > Update-Database
 
 Other Features
 
